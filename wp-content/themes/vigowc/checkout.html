@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>VigoWC</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/flexslider.css">
+    <link rel="stylesheet" href="css/chosen.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+<body>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=327963893924647";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="navbar navbar-inverse navbar-fixed-top navbar-custom">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="index.html"><span class='glyphicon glyphicon-home'></span> Home</a></li>
+                <li><a href="#about"><span class='glyphicon glyphicon-user'></span> Account</a></li>
+                <li><a href="shopping-cart.html"><span class='glyphicon glyphicon-briefcase'></span> Shopping cart</a></li>
+                <li><a href="checkout.html"><span class='glyphicon glyphicon-ok'></span> Checkout</a></li>
+            </ul>
+            <ul class="nav navbar-nav pull-right">
+                <li class="dropdown nav-bar-dropdown">
+                    <ul class="dropdown-menu">
+                        <li>
+                            <div class="nav-bar-item">
+                                <p>Recently added item(s)</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="nav-bar-item">
+                                <figure>
+                                    <img src="img/product01.jpg" alt=""/>
+                                </figure>
+                                <button class="btn btn-default custom-button no-border"><i class="glyphicon glyphicon-remove"></i></button>
+                                <div class="text">
+                                    <h2><a href="#">Mustard yellow ruffle dress</a></h2>
+                                    <div class="price-line">
+                                        <div class="new-price">$478.00</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="nav-bar-item">
+                                <figure>
+                                    <img src="img/product02.jpg" alt=""/>
+                                </figure>
+                                <button class="btn btn-default custom-button no-border"><i class="glyphicon glyphicon-remove"></i></button>
+                                <div class="text">
+                                    <h2><a href="#">Navy Blue Silk Pleated Shift Dress</a></h2>
+                                    <div class="price-line">
+                                        <div class="old-price">$250.00</div>
+                                        <div class="new-price">$180.00</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="shopping-cart.html"><span class='glyphicon glyphicon-shopping-cart'></span> My Bag: 1 item(s)</a>
+                </li>
+            </ul>
+        </div><!--/.navbar-collapse -->
+    </div>
+</div>
+
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="register-block">
+                    <a href="#">Log In</a>
+                    <span>or</span>
+                    <a href="#">Register</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h1 class='brand'><a href="index.html">VigoWC</a></h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="wrapper-block">
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <nav role='main-nav'>
+                                <ul class='main-nav'>
+                                    <li>
+                                        <a href="index.html">Home</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="category-grid.html" class="has-dropdown">Category</a>
+                                        <ul>
+                                            <li><a href="category-grid.html">Category grid</a></li>
+                                            <li><a href="category-list.html">Category-list</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li  class='active'><a href="checkout.html">Checkout</a></li>
+                                    <li>
+                                        <a href="product.html">Product</a>
+                                    </li>
+                                    <li><a href="shopping-cart.html">Cart</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="input-group search-block">
+                                <input type="text" class="form-control" placeholder="Search here">
+                                    <span class="input-group-btn">
+                                      <button class="btn btn-default" type="button"><span class='glyphicon glyphicon-search'></span></button>
+                                    </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<section class="page-title">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8">
+                    <h1>Checkout</h1>
+                </div>
+                <div class="col-sm-4">
+                    <ol class="breadcrumb text-right">
+                        <li><a href="#">Home</a></li>
+                        <li class="active">Checkout</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id='main'>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <form class="checkout-form" method="post" action="#">
+                        <div class="panel-group" id="accordion">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                            <span class="step-count">1 step:</span> Checkout Option
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <h2>New Customer</h2>
+                                                <p class="info">Register with us for future convenience:</p>
+                                                <div class="custom-checkbox">
+                                                    <input id="guest" type="checkbox" name="check" value="check1" checked />
+                                                    <label for="guest">Checkout as Guest</label>
+                                                </div>
+                                                <div class="custom-checkbox">
+                                                    <input id="register" type="checkbox" name="check" value="check1" />
+                                                    <label for="register">Register</label>
+                                                </div>
+                                                <p class="info">By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.</p>
+                                                <div class="form-space"></div>
+                                                <button type="submit" class="btn btn-default custom-button btn-lg">Continue</button>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <h2>Registered Customers</h2>
+                                                <p class="info">If you have an account with us, please log in.</p>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                                    <input type="text" class="form-control" placeholder="Enter Your E-Mail*" />
+                                                </div>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                                    <input type="password" class="form-control" placeholder="Enter Your Password*" />
+                                                </div>
+                                                <div class="custom-checkbox">
+                                                    <input id="check2" type="checkbox" name="check" value="check1" checked />
+                                                    <label for="check2">Remember password</label>
+                                                </div>
+                                                <div class="form-space"></div>
+                                                <button type="submit" class="btn btn-default custom-button btn-lg">Login</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle " data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                                            <span class="step-count">2 step:</span> Billing Information
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <h2>Your personal details</h2>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                                    <input type="text" class="form-control" placeholder="Enter Your First Name*" />
+                                                </div>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                                    <input type="text" class="form-control" placeholder="Enter Your Last Name*" />
+                                                </div>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                                    <input type="email" class="form-control" placeholder="Enter Your E-mail*" />
+                                                </div>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+                                                    <input type="text" class="form-control" placeholder="Enter Your TELEPHONE*" />
+                                                </div>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-print"></i></span>
+                                                    <input type="text" class="form-control" placeholder="Enter Your Fax" />
+                                                </div>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="icon-briefcase"></i></span>
+                                                    <input type="text" class="form-control" placeholder="Enter Your Company" />
+                                                </div>
+                                                <div class="form-space"></div>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                                    <input type="password" class="form-control" placeholder="Enter Your Password*" />
+                                                </div>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                                    <input type="password" class="form-control" placeholder="Enter Your Password*" />
+                                                </div>
+                                                <div class="form-space"></div>
+                                                <div class="custom-checkbox">
+                                                    <input id="check3" type="checkbox" name="check" value="check1" checked />
+                                                    <label for="check3">I wish to subscribe to the Vigo Shop newsletter.</label>
+                                                </div>
+                                                <div class="custom-checkbox">
+                                                    <input id="check4" type="checkbox" name="check" value="check1" />
+                                                    <label for="check4">My delivery and billing addresses are the same.</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <h2>Your Address</h2>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+                                                    <input type="text" class="form-control" placeholder="Enter Your Address 1*" />
+                                                </div>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+                                                    <input type="text" class="form-control" placeholder="Enter Your Address 2*" />
+                                                </div>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="icon-building"></i></span>
+                                                    <input type="email" class="form-control" placeholder="Enter Your City*" />
+                                                </div>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="icon-ticket"></i></span>
+                                                    <input type="text" class="form-control" placeholder="Enter Your Post Code" />
+                                                </div>
+                                                <select name="country" id="country" class="chosen-select full-width">
+                                                    <option value="default"><i class="icon-flag"></i> Enter Your Country*</option>
+                                                    <option value="10">10</option>
+                                                    <option value="25">25</option>
+                                                    <option value="30">30</option>
+                                                </select>
+                                                <select name="country" id="region" class="chosen-select full-width">
+                                                    <option value="default"><i class="icon-globe"></i> Enter Your Region/State*</option>
+                                                    <option value="10">10</option>
+                                                    <option value="25">25</option>
+                                                    <option value="30">30</option>
+                                                </select>
+
+                                                <div class="form-space"></div>
+                                                <div class="custom-checkbox">
+                                                    <input id="check5" type="checkbox" name="check" value="check1" checked />
+                                                    <label for="check5">I have read and agree to the <a href="#" class="privacy-policy">Privacy Policy</a></label>
+                                                </div>
+                                                <div class="form-space"></div>
+                                                <button type="submit" class="btn btn-default custom-button btn-lg">Continue</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                                            <span class="step-count">3 step:</span> Delivery Details
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                                            <span class="step-count">4 step:</span> Delivery Method
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseFour" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+                                            <span class="step-count">5 step:</span> Payment Method
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseFive" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">
+                                            <span class="step-count">6 step:</span> Confirm Order
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseSix" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="table-responsive shopping-cart">
+                                                    <table class="table">
+                                                        <thead>
+                                                        <tr>
+                                                            <th width="41%"><div class="title-wrap">Product Name</div></th>
+                                                            <th width="14%"><div class="title-wrap">Product Code</div></th>
+                                                            <th width="14%"><div class="title-wrap">Unit Price</div></th>
+                                                            <th width="14%"><div class="title-wrap">Quantity</div></th>
+                                                            <th width="14%"><div class="title-wrap">Subtotal</div></th>
+                                                            <th width="3%"><div class="title-wrap"><i class="glyphicon glyphicon-remove"></i></div></th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="cart-product">
+                                                                    <figure>
+                                                                        <img src="img/product01.jpg" alt=""/>
+                                                                    </figure>
+                                                                    <div class="text">
+                                                                        <h2><a href="product.html">Black and white dust sweaterdress</a></h2>
+                                                                        <div class="details">
+                                                                            <span class="detail-line">
+                                                                                <strong>Color: </strong> Black
+                                                                            </span>
+                                                                            <span class="detail-line">
+                                                                                <strong>Size: </strong> XS
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td><div class="product-code">MP125984154</div></td>
+                                                            <td><div class="price">$187.00</div></td>
+                                                            <td>
+                                                                <div class="quantity">
+                                                                    <div class="input-group">
+                                                                        <input type="text" class="form-control" value="1" placeholder="Quantity" />
+                                                                        <span class="input-group-btn">
+                                                                            <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-plus"></i></button>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td><div class="subtotal">$187.00</div></td>
+                                                            <td><button class="btn btn-default custom-button"><i class="glyphicon glyphicon-remove"></i></button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="cart-product">
+                                                                    <figure>
+                                                                        <img src="img/product02.jpg" alt=""/>
+                                                                    </figure>
+                                                                    <div class="text">
+                                                                        <h2><a href="product.html">Pale pink and black buttoneddress</a></h2>
+                                                                        <div class="details">
+                                                                            <span class="detail-line">
+                                                                                <strong>Color: </strong> White
+                                                                            </span>
+                                                                            <span class="detail-line">
+                                                                                <strong>Size: </strong> XS
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td><div class="product-code">SD148795141</div></td>
+                                                            <td><div class="price">$201.00</div></td>
+                                                            <td>
+                                                                <div class="quantity">
+                                                                    <div class="input-group">
+                                                                        <input type="text" class="form-control" value="2" placeholder="Quantity" />
+                                                                        <span class="input-group-btn">
+                                                                            <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-plus"></i></button>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td><div class="subtotal">$402.00</div></td>
+                                                            <td><button class="btn btn-default custom-button"><i class="glyphicon glyphicon-remove"></i></button></td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="total-box checkout">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <tbody>
+                            <tr>
+                                <td width="70%"><div class="strong">Subtotal:</div></td>
+                                <td width="30%"><div class="price">$434.50</div></td>
+                            </tr>
+                            <tr>
+                                <td><div class="strong">Shipping:</div></td>
+                                <td><div class="price">$6.00</div></td>
+                            </tr>
+                            <tr>
+                                <td><div class="strong">Tax (0%):</div></td>
+                                <td><div class="price">$0.00</div></td>
+                            </tr>
+                            </tbody>
+                            <tfoot>
+                            <td><div class="strong">Total:</div></td>
+                            <td><div class="price">$440.50</div></td>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <a href="#" class="btn btn-default btn-lg custom-button pull-right">Confirm Order</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+<footer>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="separator middle footer-separator"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="footer-widget">
+                    <div class="widget-title">
+                        <h2>Information</h2>
+                    </div>
+                    <div class="widget-content">
+                        <ul class="links">
+                            <li><a href="#">New Products</a></li>
+                            <li><a href="#">Top Sellers</a></li>
+                            <li><a href="#">Specials</a></li>
+                            <li><a href="#">Manufacturers</a></li>
+                            <li><a href="#">Suppliers</a></li>
+                            <li><a href="#">Our Stores</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="footer-widget">
+                    <div class="widget-title">
+                        <h2>My Account</h2>
+                    </div>
+                    <div class="widget-content">
+                        <ul class="links">
+                            <li><a href="#">New Products</a></li>
+                            <li><a href="#">Top Sellers</a></li>
+                            <li><a href="#">Specials</a></li>
+                            <li><a href="#">Manufacturers</a></li>
+                            <li><a href="#">Suppliers</a></li>
+                            <li><a href="#">Our Stores</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="footer-widget">
+                    <div class="widget-title">
+                        <h2>Customer Service</h2>
+                    </div>
+                    <div class="widget-content">
+                        <ul class="links">
+                            <li><a href="#">New Products</a></li>
+                            <li><a href="#">Top Sellers</a></li>
+                            <li><a href="#">Specials</a></li>
+                            <li><a href="#">Manufacturers</a></li>
+                            <li><a href="#">Suppliers</a></li>
+                            <li><a href="#">Our Stores</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="footer-widget">
+                    <div class="widget-title">
+                        <h2>Contact Info</h2>
+                    </div>
+                    <div class="widget-content">
+                        <address>
+                            Vigo Shop Ltd <br />
+                            United Kingdom <br />
+                            London 02587 <br />
+                            Oxford Street 48/188 <br />
+                            Working days: Mon. - Sun. <br />
+                            Working hours: 9 AM - 8 PM
+                        </address>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="separator footer-separator">
+                    <button class='scroll-top'>Scroll top</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="copyright">
+                    <p>&copy; 2016. Developed by <a href="#">Websters</a>&trade;. All Rights Reserved.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="social-links">
+                    <ul>
+                        <li><a href="#" class="facebook">facebook</a></li>
+                        <li><a href="#" class="twitter">twitter</a></li>
+                        <li><a href="#" class="rss">rss</a></li>
+                        <li><a href="#" class="digg">digg</a></li>
+                        <li><a href="#" class="linkedin">linkedin</a></li>
+                        <li><a href="#" class="flickr">flickr</a></li>
+                        <li><a href="#" class="skype">skype</a></li>
+                        <li><a href="#" class="email">email</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<div id="scripts">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+
+    <script src="js/vendor/jquery.flexslider-min.js"></script>
+    <script src="js/vendor/jquery.jcarousel.min.js"></script>
+    <script src="js/vendor/jquery.placeholder.min.js"></script>
+    <script src="js/vendor/tinynav.min.js"></script>
+    <script src="js/vendor/jquery.raty.min.js"></script>
+    <script src="js/vendor/chosen.jquery.min.js"></script>
+    <script src="js/vendor/bootstrap-slider.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</div>
+</body>
+</html>

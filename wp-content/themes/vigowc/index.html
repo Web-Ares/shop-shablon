@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>VigoWC</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="icon" type="image/png" href="img/favicon.png">
+
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/flexslider.css">
+        <link rel="stylesheet" href="css/chosen.css">
+        <link rel="stylesheet" href="css/slider.css">
+        <link rel="stylesheet" href="css/style.css">
+
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+    
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=327963893924647";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <div class="navbar navbar-inverse navbar-fixed-top navbar-custom">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html"><span class='glyphicon glyphicon-home'></span> Home</a></li>
+            <li><a href="#about"><span class='glyphicon glyphicon-user'></span> Account</a></li>
+            <li><a href="shopping-cart.html"><span class='glyphicon glyphicon-briefcase'></span> Shopping cart</a></li>
+            <li><a href="checkout.html"><span class='glyphicon glyphicon-ok'></span> Checkout</a></li>
+          </ul>
+            <ul class="nav navbar-nav pull-right">
+                <li class="dropdown nav-bar-dropdown">
+                    <ul class="dropdown-menu">
+                        <li>
+                            <div class="nav-bar-item">
+                                <p>Recently added item(s)</p>
+                            </div>
+                        </li>
+                        <li>
+                           <div class="nav-bar-item">
+                               <figure>
+                                   <img src="img/product01.jpg" alt=""/>
+                               </figure>
+                               <button class="btn btn-default custom-button no-border"><i class="glyphicon glyphicon-remove"></i></button>
+                               <div class="text">
+                                   <h2><a href="#">Mustard yellow ruffle dress</a></h2>
+                                   <div class="price-line">
+                                       <div class="new-price">$478.00</div>
+                                   </div>
+                               </div>
+                           </div>
+                        </li>
+                        <li>
+                            <div class="nav-bar-item">
+                                <figure>
+                                    <img src="img/product02.jpg" alt=""/>
+                                </figure>
+                                <button class="btn btn-default custom-button no-border"><i class="glyphicon glyphicon-remove"></i></button>
+                                <div class="text">
+                                    <h2><a href="#">Navy Blue Silk Pleated Shift Dress</a></h2>
+                                    <div class="price-line">
+                                        <div class="old-price">$250.00</div>
+                                        <div class="new-price">$180.00</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="shopping-cart.html"><span class='glyphicon glyphicon-shopping-cart'></span> My Bag: 1 item(s)</a>
+                </li>
+            </ul>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="register-block">
+                        <a href="#">Log In</a>
+                        <span>or</span>
+                        <a href="#">Register</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 class='brand'><a href="index.html">VigoWC</a></h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="wrapper-block">
+                        <div class="row">
+                            <div class="col-sm-10">
+                                <nav role='main-nav'>
+                                    <ul class='main-nav'>
+                                        <li class='active'>
+                                            <a href="index.html">Home</a>
+                                        </li>
+
+                                         <li>
+                                            <a href="category-grid.html" class="has-dropdown">Category</a>
+                                            <ul>
+                                                <li><a href="category-grid.html">Category grid</a></li>
+                                                <li><a href="category-list.html">Category-list</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li><a href="checkout.html">Checkout</a></li>
+                                        <li>
+                                            <a href="product.html">Product</a>
+                                        </li>
+                                        <li><a href="shopping-cart.html">Cart</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="input-group search-block">
+                                    <input type="text" class="form-control" placeholder="Search here">
+                                    <span class="input-group-btn">
+                                      <button class="btn btn-default" type="button"><span class='glyphicon glyphicon-search'></span></button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="homepage-slider typeOne hidden-xs">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="sliderTypeOne flexslider">
+                        <div class="slider-controls sliderTypeOne-controls">
+                            <button class="next"><i class="glyphicon glyphicon-chevron-left"></i></button>
+                            <button class="prev"><i class="glyphicon glyphicon-chevron-right"></i></button>
+                        </div>
+                        <ul class="slides">
+                            <li style="background-image: url('img/homepage-slider01.jpg');">
+                                <div class="slide-content all-white">
+                                    <div class="inner">
+                                        <h1>What's New</h1>
+                                        <div class="clearfix"></div>
+                                        <div class="small-separator"></div>
+                                        <div class="clearfix"></div>
+                                        <p>porttitor adipiscing purus. Sed nibh mauris, sodalestincidunt eget, condimentum sit amet lorem. Fusce quisturpis. Vestibulum auctor metus arcu.</p>
+                                        <div class="clearfix"></div>
+                                        <a href="category-grid.html" class='btn btn-default btn-lg custom-button'>Take a Look</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li style="background-image: url('img/homepage-slider02.jpg');">
+                                <div class="slide-content">
+                                    <div class="inner">
+                                        <h1>All about White.</h1>
+                                        <div class="clearfix"></div>
+                                        <div class="small-separator"></div>
+                                        <div class="clearfix"></div>
+                                        <p>Suspendisse potenti. Cum sociis natoque penatibuset magnis dis parturient montes, nasceturridiculus mus.</p>
+                                        <div class="clearfix"></div>
+                                        <a href="category-list.html" class='btn btn-default btn-lg custom-button'>Take a Look</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li style="background-image: url('img/homepage-slider03.jpg');">
+                                <div class="slide-content">
+                                    <div class="inner">
+                                        <h1 class='alternate'>Summer in the sity.</h1>
+                                        <div class="clearfix"></div>
+                                        <div class="small-separator"></div>
+                                        <div class="clearfix"></div>
+                                        <p>porttitor adipiscing purus. Sed nibh mauris, sodalestincidunt eget, condimentum sit amet lorem. Fusce quisturpis. Vestibulum auctor metus arcu.</p>
+                                        <div class="clearfix"></div>
+                                        <a href="category-grid.html" class='btn btn-default btn-lg custom-button'>Take a Look</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id='main'>
+        <div class="container">
+            <div class="row">
+                <div class="presentation-boxes">
+                    <div class="col-sm-4">
+                        <figure class="big-image center-content">
+                            <img src="img/homepage-categ01.jpg" alt=""/>
+                            <figcaption>
+                                <div class="content">
+                                    <h2><a href="category-list.html">New Men Collection</a></h2>
+                                    <a href="category-list.html" class='image-link'>Buy it Now &gt;</a>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-sm-4">
+                        <figure class="big-image center-content">
+                            <img src="img/homepage-categ02.jpg" alt=""/>
+                            <figcaption>
+                                <div class="content">
+                                    <h2><a href="category-grid.html">Our new Arrivals</a></h2>
+                                    <a href="category-grid.html" class='image-link'>Shop new in &gt;</a>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="combined-boxes">
+                            <figure class="big-image center-content">
+                                <img src="img/homepage-categ03.jpg" alt=""/>
+                                <figcaption>
+                                    <div class="content">
+                                        <h3><a href="category-list.html">The Half price Summer</a></h3>
+                                        <h1><a href="category-list.html">SALE</a></h1>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                            <figure class="big-image center-content">
+                                <img src="img/homepage-categ04.jpg" alt=""/>
+                                <figcaption>
+                                    <div class="content">
+                                        <h2><a href="category-grid.html">Girls</a></h2>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="homepage-products">
+                        <ul id="myTab" class="nav nav-tabs">
+                            <li class="active"><a href="#new-arrivals" data-toggle="tab">New Arrivals</a></li>
+                            <li><a href="#featured" data-toggle="tab">Featured</a></li>
+                            <li><a href="#special" data-toggle="tab">Special</a></li>
+                        </ul>
+                        <div id="myTabContent" class="tab-content">
+                            <div class="tab-pane fade in active" id="new-arrivals">
+                                <div class="slider-controls new-arrivals-controls">
+                                    <button class="next"><i class="glyphicon glyphicon-chevron-left"></i></button>
+                                    <button class="prev"><i class="glyphicon glyphicon-chevron-right"></i></button>
+                                </div>
+                                <div class="new-arrivals-slider">
+                                    <ul class="slides">
+                                        <li>
+                                            <div class="row">
+                                                <article class="category-article category-grid col-sm-3">
+                                                    <figure>
+                                                        <img src="img/product01.jpg" alt=""/>
+                                                        <div class="figure-overlay">
+
+                                                            <div class="excerpt">
+                                                                <p>
+                                                                    Sed sapien sed eros dignissimvehicula hendrerit at tellus. Nunc mollis magna ac felis tempor, vel malesuada dui tristique.
+                                                                </p>
+                                                            </div>
+                                                            <button class="btn btn-default custom-button">Add to Bag</button>
+                                                            <a href="#"><span class="wrap-icon"><i class='glyphicon glyphicon-heart'></i></span></a>
+                                                            <a href="#"><span class="wrap-icon"><i class='glyphicon glyphicon-ok'></i></span></a>
+                                                        </div>
+                                                    </figure>
+                                                    <div class="figcaption">
+                                                        <button class="color-selector">
+                                                            <span class="real-color">Color</span>
+                                                        </button>
+                                                        <button class="color-selector" >
+                                                            <span class="real-color" style="border-color: #d9d9d9; background-color: #3f3f3f">Color</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="text">
+                                                        <h2><a href="product.html">Black and white dust sweater dress</a></h2>
+                                                        <div class="price">
+                                                            <span class="new-price">$187.00</span>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                                <article class="category-article category-grid col-sm-3">
+                                                    <figure>
+                                                        <div class="corner-sign red">Sale</div>
+                                                        <img src="img/product05.jpg" alt=""/>
+                                                        <div class="figure-overlay">
+
+
+                                                            <div class="excerpt">
+                                                                <p>
+                                                                    Sed sapien sed eros dignissimvehicula hendrerit at tellus. Nunc mollis magna ac felis tempor, vel malesuada dui tristique.
+                                                                </p>
+                                                            </div>
+                                                            <button class="btn btn-default custom-button">Add to Bag</button>
+                                                            <a href="#"><span class="wrap-icon"><i class='glyphicon glyphicon-heart'></i></span></a>
+                                                            <a href="#"><span class="wrap-icon"><i class='glyphicon glyphicon-ok'></i></span></a>
+                                                        </div>
+                                                    </figure>
+                                                    <div class="figcaption">
+
+                                                    </div>
+                                                    <div class="text">
+                                                        <h2><a href="product.html">Pale pink and black buttoned dress</a></h2>
+                                                        <div class="price">
+                                                            <span class="old-price">$250.00</span>
+                                                            <span class="new-price">$201.00</span>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                                <article class="category-article category-grid col-sm-3">
+                                                    <figure>
+                                                        <div class="corner-sign">New</div>
+                                                        <img src="img/product03.jpg" alt=""/>
+                                                        <div class="figure-overlay">
+
+                                                            <div class="excerpt">
+                                                                <p>
+                                                                    Sed sapien sed eros dignissimvehicula hendrerit at tellus. Nunc mollis magna ac felis tempor, vel malesuada dui tristique.
+                                                                </p>
+                                                            </div>
+                                                            <button class="btn btn-default custom-button">Add to Bag</button>
+                                                            <a href="#"><span class="wrap-icon"><i class='glyphicon glyphicon-heart'></i></span></a>
+                                                            <a href="#"><span class="wrap-icon"><i class='glyphicon glyphicon-ok'></i></span></a>
+                                                        </div>
+                                                    </figure>
+                                                    <div class="figcaption">
+                                                        <button class="color-selector">
+                                                            <span class="real-color" style="border-color: white; background-color: #eedbd9">Color</span>
+                                                        </button>
+                                                        <button class="color-selector" >
+                                                            <span class="real-color" style="border-color: #d9d9d9; background-color: #3f3f3f">Color</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="text">
+                                                        <h2><a href="product.html">Black puplum waist-tie kududress</a></h2>
+                                                        <div class="price">
+                                                            <span class="new-price">$305.00</span>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                                <article class="category-article category-grid col-sm-3">
+                                                    <figure>
+                                                        <img src="img/product04.jpg" alt=""/>
+                                                        <div class="figure-overlay">
+
+                                                            <div class="excerpt">
+                                                                <p>
+                                                                    Sed sapien sed eros dignissimvehicula hendrerit at tellus. Nunc mollis magna ac felis tempor, vel malesuada dui tristique.
+                                                                </p>
+                                                            </div>
+                                                            <button class="btn btn-default custom-button">Add to Bag</button>
+                                                            <a href="#"><span class="wrap-icon"><i class='glyphicon glyphicon-heart'></i></span></a>
+                                                            <a href="#"><span class="wrap-icon"><i class='glyphicon glyphicon-ok'></i></span></a>
+                                                        </div>
+                                                    </figure>
+                                                    <div class="figcaption">
+                                                        <button class="color-selector">
+                                                            <span class="real-color" style="border-color: white; background-color: #eedbd9">Color</span>
+                                                        </button>
+                                                        <button class="color-selector" >
+                                                            <span class="real-color" style="border-color: #d9d9d9; background-color: #3f3f3f">Color</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="text">
+                                                        <h2><a href="#">Black puplum waist-tie kududress</a></h2>
+                                                        <div class="price">
+                                                            <span class="new-price">$305.00</span>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="row">
+                                                <article class="category-article category-grid col-sm-3">
+                                                    <figure>
+                                                        <img src="img/product03.jpg" alt=""/>
+                                                        <div class="figure-overlay">
+
+                                                            <div class="excerpt">
+                                                                <p>
+                                                                    Sed sapien sed eros dignissimvehicula hendrerit at tellus. Nunc mollis magna ac felis tempor, vel malesuada dui tristique.
+                                                                </p>
+                                                            </div>
+                                                            <button class="btn btn-default custom-button">Add to Bag</button>
+                                                            <a href="#"><span class="wrap-icon"><i class='glyphicon glyphicon-heart'></i></span></a>
+                                                            <a href="#"><span class="wrap-icon"><i class='glyphicon glyphicon-ok'></i></span></a>
+                                                        </div>
+                                                    </figure>
+                                                    <div class="figcaption">
+                                                        <button class="color-selector">
+                                                            <span class="real-color">Color</span>
+                                                        </button>
+                                                        <button class="color-selector" >
+                                                            <span class="real-color" style="border-color: #d9d9d9; background-color: #3f3f3f">Color</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="text">
+                                                        <h2><a href="product.html">Black and white dust sweater dress</a></h2>
+                                                        <div class="price">
+                                                            <span class="new-price">$187.00</span>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                                <article class="category-article category-grid col-sm-3">
+                                                    <figure>
+                                                        <img src="img/product04.jpg" alt=""/>
+                                                        <div class="figure-overlay">
+
+                                                            <div class="excerpt">
+                                                                <p>
+                                                                    Sed sapien sed eros dignissimvehicula hendrerit at tellus. Nunc mollis magna ac felis tempor, vel malesuada dui tristique.
+                                                                </p>
+                                                            </div>
+                                                            <button class="btn btn-default custom-button">Add to Bag</button>
+                                                            <a href="product.html"><span class="wrap-icon"><i class='glyphicon glyphicon-heart'></i></span></a>
+                                                            <a href="#"><span class="wrap-icon"><i class='glyphicon glyphicon-ok'></i></span></a>
+                                                        </div>
+                                                    </figure>
+                                                    <div class="figcaption">
+
+                                                    </div>
+                                                    <div class="text">
+                                                        <h2><a href="#">Pale pink and black buttoned dress</a></h2>
+                                                        <div class="price">
+                                                            <span class="old-price">$250.00</span>
+                                                            <span class="new-price">$201.00</span>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                                <article class="category-article category-grid col-sm-3">
+                                                    <figure>
+                                                        <img src="img/product01.jpg" alt=""/>
+                                                        <div class="figure-overlay">
+
+                                                            <div class="excerpt">
+                                                                <p>
+                                                                    Sed sapien sed eros dignissimvehicula hendrerit at tellus. Nunc mollis magna ac felis tempor, vel malesuada dui tristique.
+                                                                </p>
+                                                            </div>
+                                                            <button class="btn btn-default custom-button">Add to Bag</button>
+                                                            <a href="#"><span class="wrap-icon"><i class='glyphicon glyphicon-heart'></i></span></a>
+                                                            <a href="#"><span class="wrap-icon"><i class='glyphicon glyphicon-ok'></i></span></a>
+                                                        </div>
+                                                    </figure>
+                                                    <div class="figcaption">
+                                                        <button class="color-selector">
+                                                            <span class="real-color" style="border-color: white; background-color: #eedbd9">Color</span>
+                                                        </button>
+                                                        <button class="color-selector" >
+                                                            <span class="real-color" style="border-color: #d9d9d9; background-color: #3f3f3f">Color</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="text">
+                                                        <h2><a href="product.html">Black puplum waist-tie kududress</a></h2>
+                                                        <div class="price">
+                                                            <span class="new-price">$305.00</span>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                                <article class="category-article category-grid col-sm-3">
+                                                    <figure>
+                                                        <img src="img/product02.jpg" alt=""/>
+                                                        <div class="figure-overlay">
+
+                                                            <div class="excerpt">
+                                                                <p>
+                                                                    Sed sapien sed eros dignissimvehicula hendrerit at tellus. Nunc mollis magna ac felis tempor, vel malesuada dui tristique.
+                                                                </p>
+                                                            </div>
+                                                            <button class="btn btn-default custom-button">Add to Bag</button>
+                                                            <a href="#"><span class="wrap-icon"><i class='glyphicon glyphicon-heart'></i></span></a>
+                                                            <a href="#"><span class="wrap-icon"><i class='glyphicon glyphicon-ok'></i></span></a>
+                                                        </div>
+                                                    </figure>
+                                                    <div class="figcaption">
+                                                        <button class="color-selector">
+                                                            <span class="real-color" style="border-color: white; background-color: #eedbd9">Color</span>
+                                                        </button>
+                                                        <button class="color-selector" >
+                                                            <span class="real-color" style="border-color: #d9d9d9; background-color: #3f3f3f">Color</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="text">
+                                                        <h2><a href="product.html">Black puplum waist-tie kududress</a></h2>
+                                                        <div class="price">
+                                                            <span class="new-price">$305.00</span>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="featured">
+                                <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+                            </div>
+                            <div class="tab-pane fade" id="special">
+                                <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="separator middle"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="section-title">
+                                <h1>BestSellers</h1>
+                            </div>
+                        </div>
+                        <article class="category-article category-grid col-sm-4">
+                            <figure>
+                                <img src="img/product01.jpg" alt=""/>
+                                <div class="figure-overlay">
+
+                                    <div class="excerpt">
+                                        <p>
+                                            Sed sapien sed eros dignissimvehicula hendrerit at tellus. Nunc mollis magna ac felis tempor, vel malesuada dui tristique.
+                                        </p>
+                                    </div>
+                                    <button class="btn btn-default custom-button">Add to Bag</button>
+                                    <a href="#"><span class="wrap-icon"><i class='glyphicon glyphicon-heart'></i></span></a>
+                                    <a href="#"><span class="wrap-icon"><i class='glyphicon glyphicon-ok'></i></span></a>
+                                </div>
+                            </figure>
+                            <div class="figcaption">
+                                <button class="color-selector">
+                                    <span class="real-color">Color</span>
+                                </button>
+                                <button class="color-selector" >
+                                    <span class="real-color" style="border-color: #d9d9d9; background-color: #3f3f3f">Color</span>
+                                </button>
+                            </div>
+                            <div class="text">
+                                <h2><a href="product.html">Black and white dust sweater dress</a></h2>
+                                <div class="price">
+                                    <span class="new-price">$187.00</span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="category-article category-grid col-sm-4">
+                            <figure>
+                                <img src="img/product02.jpg" alt=""/>
+                                <div class="figure-overlay">
+
+
+                                    <div class="excerpt">
+                                        <p>
+                                            Sed sapien sed eros dignissimvehicula hendrerit at tellus. Nunc mollis magna ac felis tempor, vel malesuada dui tristique.
+                                        </p>
+                                    </div>
+                                    <button class="btn btn-default custom-button">Add to Bag</button>
+                                    <a href="#"><span class="wrap-icon"><i class='glyphicon glyphicon-heart'></i></span></a>
+                                    <a href="#"><span class="wrap-icon"><i class='glyphicon glyphicon-ok'></i></span></a>
+                                </div>
+                            </figure>
+                            <div class="figcaption">
+
+                            </div>
+                            <div class="text">
+                                <h2><a href="product.html">Pale pink and black buttoned dress</a></h2>
+                                <div class="price">
+                                    <span class="old-price">$250.00</span>
+                                    <span class="new-price">$201.00</span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="category-article category-grid col-sm-4">
+                            <figure>
+                                <div class="corner-sign red">Sale</div>
+                                <img src="img/product03.jpg" alt=""/>
+                                <div class="figure-overlay">
+
+                                    <div class="excerpt">
+                                        <p>
+                                            Sed sapien sed eros dignissimvehicula hendrerit at tellus. Nunc mollis magna ac felis tempor, vel malesuada dui tristique.
+                                        </p>
+                                    </div>
+                                    <button class="btn btn-default custom-button">Add to Bag</button>
+                                    <a href="#"><span class="wrap-icon"><i class='glyphicon glyphicon-heart'></i></span></a>
+                                    <a href="#"><span class="wrap-icon"><i class='glyphicon glyphicon-ok'></i></span></a>
+                                </div>
+                            </figure>
+                            <div class="figcaption">
+                                <button class="color-selector">
+                                    <span class="real-color" style="border-color: white; background-color: #eedbd9">Color</span>
+                                </button>
+                                <button class="color-selector" >
+                                    <span class="real-color" style="border-color: #d9d9d9; background-color: #3f3f3f">Color</span>
+                                </button>
+                            </div>
+                            <div class="text">
+                                <h2><a href="product.html">Black puplum waist-tie kududress</a></h2>
+                                <div class="price">
+                                    <span class="new-price">$305.00</span>
+                                </div>
+                            </div>
+                        </article>
+                        <div style="clear: both"></div>
+                    </div>
+
+                </div>
+                <aside class="col-sm-4">
+                    <div class="newsletter-widget">
+                        <h2>Newsletter</h2>
+                        <div class="small-separator"></div>
+                        <p> Sing up to get exclusive offers from your favoritebrands.</p>
+                        <input type="email" class="form-control" placeholder="Enter your email address"/>
+                        <input type="submit" value="Sign up" class="btn btn-default custom-button btn-lg" />
+                    </div>
+
+                </aside>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="separator middle footer-separator"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="footer-widget">
+                        <div class="widget-title">
+                            <h2>Information</h2>
+                        </div>
+                        <div class="widget-content">
+                            <ul class="links">
+                                <li><a href="#">New Products</a></li>
+                                <li><a href="#">Top Sellers</a></li>
+                                <li><a href="#">Specials</a></li>
+                                <li><a href="#">Manufacturers</a></li>
+                                <li><a href="#">Suppliers</a></li>
+                                <li><a href="#">Our Stores</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="footer-widget">
+                        <div class="widget-title">
+                            <h2>My Account</h2>
+                        </div>
+                        <div class="widget-content">
+                            <ul class="links">
+                                <li><a href="#">New Products</a></li>
+                                <li><a href="#">Top Sellers</a></li>
+                                <li><a href="#">Specials</a></li>
+                                <li><a href="#">Manufacturers</a></li>
+                                <li><a href="#">Suppliers</a></li>
+                                <li><a href="#">Our Stores</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="footer-widget">
+                        <div class="widget-title">
+                            <h2>Customer Service</h2>
+                        </div>
+                        <div class="widget-content">
+                            <ul class="links">
+                                <li><a href="#">New Products</a></li>
+                                <li><a href="#">Top Sellers</a></li>
+                                <li><a href="#">Specials</a></li>
+                                <li><a href="#">Manufacturers</a></li>
+                                <li><a href="#">Suppliers</a></li>
+                                <li><a href="#">Our Stores</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="footer-widget">
+                        <div class="widget-title">
+                            <h2>Contact Info</h2>
+                        </div>
+                        <div class="widget-content">
+                            <address>
+                                Vigo Shop Ltd <br />
+                                United Kingdom <br />
+                                London 02587 <br />
+                                Oxford Street 48/188 <br />
+                                Working days: Mon. - Sun. <br />
+                                Working hours: 9 AM - 8 PM
+                            </address>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="separator footer-separator">
+                        <button class='scroll-top'>Scroll top</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="copyright">
+                        <p>&copy; 2016. Developed by <a href="#">Websters</a>&trade;. All Rights Reserved.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="social-links">
+                        <ul>
+                            <li><a href="#" class="facebook">facebook</a></li>
+                            <li><a href="#" class="twitter">twitter</a></li>
+                            <li><a href="#" class="rss">rss</a></li>
+                            <li><a href="#" class="digg">digg</a></li>
+                            <li><a href="#" class="linkedin">linkedin</a></li>
+                            <li><a href="#" class="flickr">flickr</a></li>
+                            <li><a href="#" class="skype">skype</a></li>
+                            <li><a href="#" class="email">email</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="scripts">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+
+        <script src="js/vendor/jquery.flexslider-min.js"></script>
+        <script src="js/vendor/jquery.jcarousel.min.js"></script>
+        <script src="js/vendor/jquery.placeholder.min.js"></script>
+        <script src="js/vendor/tinynav.min.js"></script>
+        <script src="js/vendor/jquery.raty.min.js"></script>
+        <script src="js/vendor/chosen.jquery.min.js"></script>
+        <script src="js/vendor/bootstrap-slider.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
+    </div>
+    </body>
+</html>

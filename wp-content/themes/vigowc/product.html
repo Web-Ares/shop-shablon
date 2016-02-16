@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>VigoWC</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/flexslider.css">
+    <link rel="stylesheet" href="css/chosen.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+<body>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=327963893924647";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="navbar navbar-inverse navbar-fixed-top navbar-custom">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="index.html"><span class='glyphicon glyphicon-home'></span> Home</a></li>
+                <li><a href="#about"><span class='glyphicon glyphicon-user'></span> Account</a></li>
+                <li><a href="shopping-cart.html"><span class='glyphicon glyphicon-briefcase'></span> Shopping cart</a></li>
+                <li><a href="checkout.html"><span class='glyphicon glyphicon-ok'></span> Checkout</a></li>
+            </ul>
+            <ul class="nav navbar-nav pull-right">
+                <li class="dropdown nav-bar-dropdown">
+                    <ul class="dropdown-menu">
+                        <li>
+                            <div class="nav-bar-item">
+                                <p>Recently added item(s)</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="nav-bar-item">
+                                <figure>
+                                    <img src="img/product01.jpg" alt=""/>
+                                </figure>
+                                <button class="btn btn-default custom-button no-border"><i class="glyphicon glyphicon-remove"></i></button>
+                                <div class="text">
+                                    <h2><a href="#">Mustard yellow ruffle dress</a></h2>
+                                    <div class="price-line">
+                                        <div class="new-price">$478.00</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="nav-bar-item">
+                                <figure>
+                                    <img src="img/product02.jpg" alt=""/>
+                                </figure>
+                                <button class="btn btn-default custom-button no-border"><i class="glyphicon glyphicon-remove"></i></button>
+                                <div class="text">
+                                    <h2><a href="#">Navy Blue Silk Pleated Shift Dress</a></h2>
+                                    <div class="price-line">
+                                        <div class="old-price">$250.00</div>
+                                        <div class="new-price">$180.00</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="shopping-cart.html"><span class='glyphicon glyphicon-shopping-cart'></span> My Bag: 1 item(s)</a>
+                </li>
+            </ul>
+        </div><!--/.navbar-collapse -->
+    </div>
+</div>
+
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="register-block">
+                    <a href="#">Log In</a>
+                    <span>or</span>
+                    <a href="#">Register</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h1 class='brand'><a href="index.html">VigoWC</a></h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="wrapper-block">
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <nav role='main-nav'>
+                                <ul class='main-nav'>
+                                    <li>
+                                        <a href="index.html">Home</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="category-grid.html" class="has-dropdown">Category</a>
+                                        <ul>
+                                            <li><a href="category-grid.html">Category grid</a></li>
+                                            <li><a href="category-list.html">Category-list</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li><a href="checkout.html">Checkout</a></li>
+                                    <li class='active'>
+                                        <a href="product.html">Product</a>
+                                    </li>
+                                    <li><a href="shopping-cart.html">Cart</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="input-group search-block">
+                                <input type="text" class="form-control" placeholder="Search here">
+                                    <span class="input-group-btn">
+                                      <button class="btn btn-default" type="button"><span class='glyphicon glyphicon-search'></span></button>
+                                    </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+    <section class="page-title">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <ol class="breadcrumb">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Fashion</a></li>
+                        <li><a href="#">Worman</a></li>
+                        <li class="active">Black and white dust sweater dress</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id='main'>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="product-slider-small">
+                        <ul id="mycarousel" class="jcarousel jcarousel-skin-tango">
+                            <li><a href="#" rel='img/big-product.jpg'><img src="img/big-product.jpg" alt=""/></a></li>
+                            <li><a href="#" rel='img/small-product01.jpg'><img src="img/small-product01.jpg" /></a></li>
+                            <li><a href="#" rel='img/small-product02.jpg'><img src="img/small-product02.jpg" /></a></li>
+                            <li><a href="#" rel='img/small-product03.jpg'><img src="img/small-product03.jpg" /></a></li>
+                            <li><a href="#" rel='img/product06.jpg'><img src="img/product06.jpg" /></a></li>
+                        </ul>
+                    </div>
+                    <div class="product-image-big" style="background-image: url('img/big-product.jpg');"></div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="product-details">
+                        <h1>Black and white dust sweater dress</h1>
+                        <hr />
+                        <div class="rating-line">
+                            <div class="stars" data-number="5" data-score="4"></div>
+                            <div class="review-count"><a href="#">5 review(s)</a></div> |
+                            <div class="review-count"><a href="#">Add Your Review</a></div>
+                        </div>
+                        <hr />
+                        <div class="details">
+                            <span class="detail-line"><strong>Availability:</strong> In Stock</span>
+                            <span class="detail-line"><strong>Product Code:</strong> 483512569</span>
+                            <span class="detail-line"><strong>Brand:</strong> Apple</span>
+                        </div>
+                        <div class="description">
+                            Vivamus a tortor est. Aliquam sit amet enim fermentum, pellentesquenunc ac, venenatis nulla. Cras ut tellus lectus. Ut congue lorem sapien,sed accumsan est congue vel. Quisque quis ipsum dignissim, ullamcorper metus gravida, vestibulum augue. Praesent accumsan pellentesque sem sed rhoncus...
+                        </div>
+                        <div class="buttons">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <select name="color" class="chosen-select">
+                                        <option value="default">Select Color</option>
+                                        <option value="price-asc">Red</option>
+                                        <option value="price-desc">Blue</option>
+                                        <option value="Size">Black</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-4">
+                                    <select name="size" class="chosen-select">
+                                        <option value="default">Select Size</option>
+                                        <option value="price-asc">L</option>
+                                        <option value="price-desc">M</option>
+                                        <option value="Size">S</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" value="1" placeholder="Quantity" />
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-plus"></i></button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="price-line">
+                            <div class="price">$187.00</div>
+                            <button class="btn btn-default custom-button custom-button-inverted">Add to bag</button>
+                            <div class="small-buttons">
+                                <a href="#"><span class="wrap-icon"><i class='glyphicon glyphicon-heart'></i></span> Add to whislist</a> <br />
+                                <a href="#"><span class="wrap-icon"><i class='glyphicon glyphicon-ok'></i></span> Add to compare</a>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="share-line">
+                            <span class="title">Share: </span>
+                            <div class="share-widget">
+                                <img src="img/share-widget.png" alt=""/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="spacer"></div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="product-collapse">
+                        <div class="panel-group" id="accordion">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                            Description
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <p>
+                                            Sed volutpat ac massa eget lacinia. Suspendisse non purus semper, tellus vel,
+                                            tristique urna. Aenean volutpat lacus at dolor blandit, vitae lobortis ante semper. In ut rutrum diam, ac congue turpis. Ut bibendum metus fringilla, blandit elit at, commodo neque. Maecenas vehicula volutpat elit, in interdum lacus faucibus sit
+                                            amet.
+                                        </p>
+                                        <p>
+                                            Sed sed interdum diam. Donec sit amet enim tempor, dapibus nunc eu, tincidunt mi.
+                                            Vivamus dignissim nisl eu <em><span class="highlight red">euismod ullamcorper</span></em>. Donec pellentesque diam id estv
+                                            tristique vestibulum. Donec eget feugiat ante. Integer arcu libero, dictum nec congue
+                                            sed, faucibus sit amet lectus.
+                                        </p>
+                                        <p>
+                                            Phasellus consequat id purus in convallis. Nulla quis nunc auctor, pretium enimnec, tristique magna. Vivamus vitae arcu faucibus, dictum magna vel, adipiscingjusto. Sed nec ullamcorper lacus. Aenean tincidunt tincidunt ligula.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                                            Details
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p>The perfect mix of portability and performance in a slim 1" form factor:</p>
+                                        <ul>
+                                            <li>3rd gen Intel® Core™ i7 quad core processor available;</li>
+                                            <li>Windows 8 Pro available;</li>
+                                            <li>13.3" and 15.5" screen sizes available;</li>
+                                            <li>Double your battery life with available sheet battery;</li>
+                                            <li>4th gen Intel® Core™ i7 processor available;</li>
+                                            <li>Windows 8 Pro available;</li>
+                                            <li>Full HD TRILUMINOS IPS touchscreen (1920 x 1080);</li>
+                                            <li>Super fast 512GB PCIe SSD available;</li>
+                                            <li>Ultra-light at just 2.34 lbs.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                                            Accessories
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <article class="category-article category-list">
+                                            <figure>
+                                                <img src="img/product01.jpg" alt=""/>
+                                                <figcaption>
+
+                                                </figcaption>
+                                            </figure>
+                                            <div class="text-wrap">
+                                                <div class="right visible-lg">
+                                                    <div class="price">
+                                                        <span class="old-price">$250.00</span>
+                                                        <span class="new-price">$201.00</span>
+                                                    </div>
+                                                    <button class="btn btn-default custom-button">Add to Bag</button>
+                                                </div>
+                                                <div class="text">
+                                                    <h2><a href="product.html">Pale pink and black buttoned dress</a></h2>
+                                                    <div class="rating-line">
+                                                        <div class="stars" data-number="5" data-score="3"></div>
+                                                        <div class="review-count"><a href="#">2 review(s)</a></div>
+                                                    </div>
+                                                    <div class="excerpt">
+                                                        <p>
+                                                            Donec in lobortis massa. Donec aliquet dictum gravida. Sed purus mauris, scelerisque sed egestas vel, semper dictum leo. Nulla pulvinar id lacus sed porttitor. Etiam gravida eleifend velit, seddapibus.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="right hidden-lg">
+                                                    <div class="price">
+                                                        <span class="old-price">$250.00</span>
+                                                        <span class="new-price">$201.00</span>
+                                                    </div>
+                                                    <button class="btn btn-default custom-button">Add to Bag</button>
+                                                </div>
+                                            </div>
+                                        </article>
+                                        <article class="category-article category-list">
+                                            <figure>
+                                                <img src="img/product02.jpg" alt=""/>
+                                                <figcaption>
+
+                                                </figcaption>
+                                            </figure>
+                                            <div class="text-wrap">
+                                                <div class="right visible-lg">
+                                                    <div class="price">
+                                                        <span class="old-price">$250.00</span>
+                                                        <span class="new-price">$201.00</span>
+                                                    </div>
+                                                    <button class="btn btn-default custom-button">Add to Bag</button>
+                                                </div>
+                                                <div class="text">
+                                                    <h2><a href="product.html">Pale pink and black buttoned dress</a></h2>
+                                                    <div class="rating-line">
+                                                        <div class="stars" data-number="5" data-score="3"></div>
+                                                        <div class="review-count"><a href="#">2 review(s)</a></div>
+                                                    </div>
+                                                    <div class="excerpt">
+                                                        <p>
+                                                            Donec in lobortis massa. Donec aliquet dictum gravida. Sed purus mauris, scelerisque sed egestas vel, semper dictum leo. Nulla pulvinar id lacus sed porttitor. Etiam gravida eleifend velit, seddapibus.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="right hidden-lg">
+                                                    <div class="price">
+                                                        <span class="old-price">$250.00</span>
+                                                        <span class="new-price">$201.00</span>
+                                                    </div>
+                                                    <button class="btn btn-default custom-button">Add to Bag</button>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                                            Video
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseFour" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <div class="latest-video">
+                                            <iframe src="http://www.youtube.com/embed/ukJjdIIqU0s" frameborder="0" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="section-title">
+                        <h1>Related products</h1>
+                    </div>
+                </div>
+                <article class="category-article category-grid col-sm-3">
+                    <figure>
+                        <div class="corner-sign red">-50%</div>
+                        <img src="img/product01.jpg" alt=""/>
+                        <div class="figure-overlay">
+                            <div class="rating-line">
+                                <div class="stars-white" data-number="5" data-score="4"></div>
+                            </div>
+                            <div class="excerpt">
+                                <p>
+                                    Sed sapien sed eros dignissimvehicula hendrerit at tellus. Nunc mollis magna ac felis tempor, vel malesuada dui tristique.
+                                </p>
+                            </div>
+                            <button class="btn btn-default custom-button">Add to Bag</button>
+                            <a href="#"><span class="wrap-icon"><i class='glyphicon glyphicon-heart'></i></span></a>
+                            <a href="#"><span class="wrap-icon"><i class='glyphicon glyphicon-ok'></i></span></a>
+                        </div>
+                    </figure>
+                    <div class="figcaption">
+                        <button class="color-selector">
+                            <span class="real-color">Color</span>
+                        </button>
+                        <button class="color-selector" >
+                            <span class="real-color" style="border-color: #d9d9d9; background-color: #3f3f3f">Color</span>
+                        </button>
+                    </div>
+                    <div class="text">
+                        <h2><a href="#">Black and white dust sweater dress</a></h2>
+                        <div class="price">
+                            <span class="new-price">$187.00</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="category-article category-grid col-sm-3">
+                    <figure>
+                        <img src="img/product02.jpg" alt=""/>
+                        <div class="figure-overlay">
+                            <div class="rating-line">
+                                <div class="stars-white" data-number="5" data-score="2"></div>
+                            </div>
+                            <div class="excerpt">
+                                <p>
+                                    Sed sapien sed eros dignissimvehicula hendrerit at tellus. Nunc mollis magna ac felis tempor, vel malesuada dui tristique.
+                                </p>
+                            </div>
+                            <button class="btn btn-default custom-button">Add to Bag</button>
+                            <a href="#"><span class="wrap-icon"><i class='glyphicon glyphicon-heart'></i></span></a>
+                            <a href="#"><span class="wrap-icon"><i class='glyphicon glyphicon-ok'></i></span></a>
+                        </div>
+                    </figure>
+                    <div class="figcaption">
+
+                    </div>
+                    <div class="text">
+                        <h2><a href="#">Pale pink and black buttoned dress</a></h2>
+                        <div class="price">
+                            <span class="old-price">$250.00</span>
+                            <span class="new-price">$201.00</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="category-article category-grid col-sm-3">
+                    <figure>
+                        <div class="corner-sign">New</div>
+                        <img src="img/product03.jpg" alt=""/>
+                        <div class="figure-overlay">
+                            <div class="rating-line">
+                                <div class="stars-white" data-number="5" data-score="5"></div>
+                            </div>
+                            <div class="excerpt">
+                                <p>
+                                    Sed sapien sed eros dignissimvehicula hendrerit at tellus. Nunc mollis magna ac felis tempor, vel malesuada dui tristique.
+                                </p>
+                            </div>
+                            <button class="btn btn-default custom-button">Add to Bag</button>
+                            <a href="#"><span class="wrap-icon"><i class='glyphicon glyphicon-heart'></i></span></a>
+                            <a href="#"><span class="wrap-icon"><i class='glyphicon glyphicon-ok'></i></span></a>
+                        </div>
+                    </figure>
+                    <div class="figcaption">
+                        <button class="color-selector">
+                            <span class="real-color" style="border-color: white; background-color: #eedbd9">Color</span>
+                        </button>
+                        <button class="color-selector" >
+                            <span class="real-color" style="border-color: #d9d9d9; background-color: #3f3f3f">Color</span>
+                        </button>
+                    </div>
+                    <div class="text">
+                        <h2><a href="#">Black puplum waist-tie kududress</a></h2>
+                        <div class="price">
+                            <span class="new-price">$305.00</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="category-article category-grid col-sm-3">
+                    <figure>
+                        <img src="img/product03.jpg" alt=""/>
+                        <div class="figure-overlay">
+                            <div class="rating-line">
+                                <div class="stars-white" data-number="5" data-score="5"></div>
+                            </div>
+                            <div class="excerpt">
+                                <p>
+                                    Sed sapien sed eros dignissimvehicula hendrerit at tellus. Nunc mollis magna ac felis tempor, vel malesuada dui tristique.
+                                </p>
+                            </div>
+                            <button class="btn btn-default custom-button">Add to Bag</button>
+                            <a href="#"><span class="wrap-icon"><i class='glyphicon glyphicon-heart'></i></span></a>
+                            <a href="#"><span class="wrap-icon"><i class='glyphicon glyphicon-ok'></i></span></a>
+                        </div>
+                    </figure>
+                    <div class="figcaption">
+                        <button class="color-selector">
+                            <span class="real-color" style="border-color: white; background-color: #eedbd9">Color</span>
+                        </button>
+                        <button class="color-selector" >
+                            <span class="real-color" style="border-color: #d9d9d9; background-color: #3f3f3f">Color</span>
+                        </button>
+                    </div>
+                    <div class="text">
+                        <h2><a href="#">Black puplum waist-tie kududress</a></h2>
+                        <div class="price">
+                            <span class="new-price">$305.00</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+<footer>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="separator middle footer-separator"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="footer-widget">
+                    <div class="widget-title">
+                        <h2>Information</h2>
+                    </div>
+                    <div class="widget-content">
+                        <ul class="links">
+                            <li><a href="#">New Products</a></li>
+                            <li><a href="#">Top Sellers</a></li>
+                            <li><a href="#">Specials</a></li>
+                            <li><a href="#">Manufacturers</a></li>
+                            <li><a href="#">Suppliers</a></li>
+                            <li><a href="#">Our Stores</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="footer-widget">
+                    <div class="widget-title">
+                        <h2>My Account</h2>
+                    </div>
+                    <div class="widget-content">
+                        <ul class="links">
+                            <li><a href="#">New Products</a></li>
+                            <li><a href="#">Top Sellers</a></li>
+                            <li><a href="#">Specials</a></li>
+                            <li><a href="#">Manufacturers</a></li>
+                            <li><a href="#">Suppliers</a></li>
+                            <li><a href="#">Our Stores</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="footer-widget">
+                    <div class="widget-title">
+                        <h2>Customer Service</h2>
+                    </div>
+                    <div class="widget-content">
+                        <ul class="links">
+                            <li><a href="#">New Products</a></li>
+                            <li><a href="#">Top Sellers</a></li>
+                            <li><a href="#">Specials</a></li>
+                            <li><a href="#">Manufacturers</a></li>
+                            <li><a href="#">Suppliers</a></li>
+                            <li><a href="#">Our Stores</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="footer-widget">
+                    <div class="widget-title">
+                        <h2>Contact Info</h2>
+                    </div>
+                    <div class="widget-content">
+                        <address>
+                            Vigo Shop Ltd <br />
+                            United Kingdom <br />
+                            London 02587 <br />
+                            Oxford Street 48/188 <br />
+                            Working days: Mon. - Sun. <br />
+                            Working hours: 9 AM - 8 PM
+                        </address>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="separator footer-separator">
+                    <button class='scroll-top'>Scroll top</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="copyright">
+                    <p>&copy; 2016. Developed by <a href="#">Websters</a>&trade;. All Rights Reserved.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="social-links">
+                    <ul>
+                        <li><a href="#" class="facebook">facebook</a></li>
+                        <li><a href="#" class="twitter">twitter</a></li>
+                        <li><a href="#" class="rss">rss</a></li>
+                        <li><a href="#" class="digg">digg</a></li>
+                        <li><a href="#" class="linkedin">linkedin</a></li>
+                        <li><a href="#" class="flickr">flickr</a></li>
+                        <li><a href="#" class="skype">skype</a></li>
+                        <li><a href="#" class="email">email</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<div id="scripts">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+
+    <script src="js/vendor/jquery.flexslider-min.js"></script>
+    <script src="js/vendor/jquery.jcarousel.min.js"></script>
+    <script src="js/vendor/jquery.placeholder.min.js"></script>
+    <script src="js/vendor/tinynav.min.js"></script>
+    <script src="js/vendor/jquery.raty.min.js"></script>
+    <script src="js/vendor/chosen.jquery.min.js"></script>
+    <script src="js/vendor/bootstrap-slider.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</div>
+</body>
+</html>
