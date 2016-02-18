@@ -7,7 +7,7 @@
 
 get_header();
 
-echo 'tut';
+
 ?>
 
 
