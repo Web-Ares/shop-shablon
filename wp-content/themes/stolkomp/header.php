@@ -41,9 +41,9 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="index.html"><span class='glyphicon glyphicon-home'></span> Home</a></li>
-                <li><a href="#about"><span class='glyphicon glyphicon-user'></span> Account</a></li>
-                <li><a href="shopping-cart.html"><span class='glyphicon glyphicon-briefcase'></span> Shopping cart</a>
+                <li class="active"><a href="<?php echo get_site_url(); ?>"><span class='glyphicon glyphicon-home'></span> Home</a></li>
+                <li><a href="/my-account/"><span class='glyphicon glyphicon-user'></span> Account</a></li>
+                <li><a href="/cart/"><span class='glyphicon glyphicon-briefcase'></span> Shopping cart</a>
                 </li>
                 <li><a href="checkout.html"><span class='glyphicon glyphicon-ok'></span> Checkout</a></li>
             </ul>
@@ -89,7 +89,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="shopping-cart.html"><span class='glyphicon glyphicon-shopping-cart'></span> My Bag: 1
+                    <a href="/cart/"><span class='glyphicon glyphicon-shopping-cart'></span> My Bag: 1
                         item(s)</a>
                 </li>
             </ul>

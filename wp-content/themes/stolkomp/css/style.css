@@ -6359,3 +6359,7 @@ footer {
 .admin-bar body {
     padding-top: 82px;
 }
+
+.admin-bar header {
+    padding-top: 50px;
+}
