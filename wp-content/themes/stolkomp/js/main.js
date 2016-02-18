@@ -135,7 +135,7 @@ var VigoShop = {
         jQuery('.l_tinynav1').addClass('hidden-xs');
         jQuery('#tinynav1').addClass('visible-xs');
         jQuery('.stars').raty({
-            path : 'img',
+            path : 'http://stolkomp.loc/wp-content/themes/stolkomp/img',
             half : false,
             score: function() {
                 return jQuery(this).attr('data-score');
@@ -145,7 +145,7 @@ var VigoShop = {
             }
         });
         jQuery('.stars-white').raty({
-            path : 'img',
+            path : 'http://stolkomp.loc/wp-content/themes/stolkomp/img',
             starOff : 'star-off-white.png',
             starOn : 'star-on-white.png',
             half : false,
