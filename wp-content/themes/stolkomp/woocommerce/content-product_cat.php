@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-global $wp_query, $woocommerce_loop;
+global $woocommerce_loop;
 
 // Store loop count we're currently on.
 if ( empty( $woocommerce_loop['loop'] ) ) {
@@ -34,57 +34,24 @@ if ( empty( $woocommerce_loop['columns'] ) ) {
 // Increase loop count.
 $woocommerce_loop['loop']++;
 ?>
-<?php var_dump($category); ?>
 
-<li <?php wc_product_cat_class( '', $category ); ?>>
-	<?php
-	/**
-	 * woocommerce_before_subcategory hook.
-	 *
-	 * @hooked woocommerce_template_loop_category_link_open - 10
-	 */
-	do_action( 'woocommerce_before_subcategory', $category );
 
-	/**
-	 * woocommerce_before_subcategory_title hook.
-	 *
-	 * @hooked woocommerce_subcategory_thumbnail - 10
-	 */
-	do_action( 'woocommerce_before_subcategory_title', $category );
-
-	/**
-	 * woocommerce_shop_loop_subcategory_title hook.
-	 *
-	 * @hooked woocommerce_template_loop_category_title - 10
-	 */
-	do_action( 'woocommerce_shop_loop_subcategory_title', $category );
-
-	/**
-	 * woocommerce_after_subcategory_title hook.
-	 */
-	do_action( 'woocommerce_after_subcategory_title', $category );
-
-	/**
-	 * woocommerce_after_subcategory hook.
-	 *
-	 * @hooked woocommerce_template_loop_category_link_close - 10
-	 */
-	do_action( 'woocommerce_after_subcategory', $category ); ?>
-</li>
-<div class="col-sm-4">
+<div class="col-sm-6">
 	<figure class="big-image center-content">
 
-		<?php $cat = $wp_query->get_queried_object();
-		$thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );
-		$image = wp_get_attachment_url($thumbnail_id); ?>
+		<?php
+		$thumbnail_id = get_woocommerce_term_meta( $category->term_id, 'thumbnail_id', true );
+		$image_link  = wp_get_attachment_image_src( $thumbnail_id, 'full' )[0]; ?>
 
-		<?php echo $image;?>
-		<img src="img/homepage-categ02.jpg" alt=""/>
+
+		<img src="<?php echo $image_link?>" alt="<?php echo $category->slug; ?>"/>
 		<figcaption>
 			<div class="content">
-				<h2><a href="category-grid.html">Our new Arrivals</a></h2>
-				<a href="category-grid.html" class='image-link'>Shop new in &gt;</a>
+
+				<h2><?php woocommerce_template_loop_category_link_open( $category ); ?><?php echo $category->name; woocommerce_template_loop_category_link_close();?></h2>
+				<?php echo '<a href="' . get_term_link( $category->slug, 'product_cat' ) . '" class='."image-link".'>'; ?>Show all in category: <?php echo $category->name; woocommerce_template_loop_category_link_close();?>
 			</div>
 		</figcaption>
+
 	</figure>
 </div>
