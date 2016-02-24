@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-global $woocommerce_loop;
+global $wp_query, $woocommerce_loop;
 
 // Store loop count we're currently on.
 if ( empty( $woocommerce_loop['loop'] ) ) {
@@ -34,16 +34,57 @@ if ( empty( $woocommerce_loop['columns'] ) ) {
 // Increase loop count.
 $woocommerce_loop['loop']++;
 ?>
+<?php var_dump($category); ?>
 
-	<div class="col-sm-4">
-		<figure class="big-image center-content">
-			<img src="img/homepage-categ01.jpg" alt=""/>
-			<figcaption>
-				<div class="content">
-					<h2><a href="category-list.html">New Men Collection</a></h2>
-					<a href="category-list.html" class='image-link'>Buy it Now &gt;</a>
-				</div>
-			</figcaption>
-		</figure>
-	</div>
+<li <?php wc_product_cat_class( '', $category ); ?>>
+	<?php
+	/**
+	 * woocommerce_before_subcategory hook.
+	 *
+	 * @hooked woocommerce_template_loop_category_link_open - 10
+	 */
+	do_action( 'woocommerce_before_subcategory', $category );
 
+	/**
+	 * woocommerce_before_subcategory_title hook.
+	 *
+	 * @hooked woocommerce_subcategory_thumbnail - 10
+	 */
+	do_action( 'woocommerce_before_subcategory_title', $category );
+
+	/**
+	 * woocommerce_shop_loop_subcategory_title hook.
+	 *
+	 * @hooked woocommerce_template_loop_category_title - 10
+	 */
+	do_action( 'woocommerce_shop_loop_subcategory_title', $category );
+
+	/**
+	 * woocommerce_after_subcategory_title hook.
+	 */
+	do_action( 'woocommerce_after_subcategory_title', $category );
+
+	/**
+	 * woocommerce_after_subcategory hook.
+	 *
+	 * @hooked woocommerce_template_loop_category_link_close - 10
+	 */
+	do_action( 'woocommerce_after_subcategory', $category ); ?>
+</li>
+<div class="col-sm-4">
+	<figure class="big-image center-content">
+
+		<?php $cat = $wp_query->get_queried_object();
+		$thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );
+		$image = wp_get_attachment_url($thumbnail_id); ?>
+
+		<?php echo $image;?>
+		<img src="img/homepage-categ02.jpg" alt=""/>
+		<figcaption>
+			<div class="content">
+				<h2><a href="category-grid.html">Our new Arrivals</a></h2>
+				<a href="category-grid.html" class='image-link'>Shop new in &gt;</a>
+			</div>
+		</figcaption>
+	</figure>
+</div>
