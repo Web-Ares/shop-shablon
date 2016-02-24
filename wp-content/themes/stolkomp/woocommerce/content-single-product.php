@@ -118,7 +118,7 @@ if (post_password_required()) {
                             echo sprintf(get_woocommerce_currency_symbol()) . ' ' . $product->get_regular_price();
                         } ?>
                     </div>
-                    <button class="btn btn-default custom-button custom-button-inverted">Add to bag</button>
+                    <a href="<?php echo $product->add_to_cart_url(); ?>" class="btn btn-default custom-button custom-button-inverted">Add to bag</a>
                     <div class="small-buttons">
                         <a href="#"><span class="wrap-icon"><i class='glyphicon glyphicon-heart'></i></span> Add to
                             whislist</a>
