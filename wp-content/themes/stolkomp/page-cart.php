@@ -11,12 +11,12 @@ get_header(); ?>
         <div class="container">
             <div class="row">
                 <div class="col-sm-8">
-                    <h1>Shopping Cart</h1>
+                    <h1><?php the_title();?></h1>
                 </div>
                 <div class="col-sm-4">
                     <ol class="breadcrumb text-right">
                         <li><a href="<?php echo site_url(); ?>">Home</a></li>
-                        <li class="active">Shopping Cart</li>
+                        <li class="active"><?php the_title();?></li>
                     </ol>
                 </div>
             </div>
