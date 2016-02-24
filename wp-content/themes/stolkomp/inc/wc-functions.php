@@ -23,7 +23,16 @@ function ie_woocommerce_breadcrumbs() {
     );
 }
 
+add_filter('woocommerce_product_subcategories', 'vasya_woocommerce_product_subcategories');
 
+function vasya_woocommerce_product_subcategories(){
+
+}
+add_filter('woocommerce_subcategory_count_html','vasya_woocommerce_subcategory_count_html');
+
+function vasya_woocommerce_subcategory_count_html($count){
+   return '';
+}
 //add_filter( 'woocommerce_get_price_html', 'custom_price_html', 100, 2 );
 //function custom_price_html( $price, $product ){
 //    $price = '';
