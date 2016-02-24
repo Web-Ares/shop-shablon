@@ -95,7 +95,6 @@
 
                      $cart_url = $cart -> get_cart_url();
                      $count_products = count($cart -> get_cart_item_quantities());
-
                     ?>
                     <a href="<?php echo $cart_url;?>"><span class='glyphicon glyphicon-shopping-cart'></span> My Bag: <?php echo $count_products; ?>
                         item(s)</a>

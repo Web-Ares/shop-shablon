@@ -70,7 +70,7 @@ if (0 === $woocommerce_loop['loop'] % $woocommerce_loop['columns']) {
                     <?php echo apply_filters('woocommerce_short_description', $post->post_excerpt) ?>
                 </p>
             </div>
-            <button class="btn btn-default custom-button">Add to Bag</button>
+            <a href="<?php echo $product->add_to_cart_url(); ?>" class="btn btn-default custom-button">Add to Bag</a>
         </div>
     </figure>
     <div class="figcaption">
