@@ -22,23 +22,20 @@
                         <div class="col-sm-10">
                             <nav role='main-nav'>
                                 <ul class='main-nav'>
-                                    <li class='active'>
-                                        <a href="index.html">Home</a>
-                                    </li>
 
-                                    <li>
-                                        <a href="category-grid.html" class="has-dropdown">Category</a>
-                                        <ul>
-                                            <li><a href="category-grid.html">Category grid</a></li>
-                                            <li><a href="category-list.html">Category-list</a></li>
-                                        </ul>
-                                    </li>
+                                    <?php
+                                    $locations = get_nav_menu_locations();
+                                    $menu_items = wp_get_nav_menu_items($locations['menu']);
 
-                                    <li><a href="checkout.html">Checkout</a></li>
-                                    <li>
-                                        <a href="product.html">Product</a>
-                                    </li>
-                                    <li><a href="shopping-cart.html">Cart</a></li>
+                                    foreach ((array)$menu_items as $key => $menu_item) { ?>
+                                        <li class="<?php if ($post->ID == $menu_item->object_id) {
+                                            echo ' '.'active';
+                                        }?>">
+                                            <a href="<?php echo $menu_item->url; ?>"><?php echo $menu_item->title; ?></a>
+                                        </li>
+
+                                    <?php }; ?>
+
                                 </ul>
                             </nav>
                         </div>

@@ -41,12 +41,20 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="<?php echo get_site_url(); ?>"><span
-                                class='glyphicon glyphicon-home'></span> Home</a></li>
-                    <li><a href="/my-account/"><span class='glyphicon glyphicon-user'></span> Account</a></li>
-                    <li><a href="/cart/"><span class='glyphicon glyphicon-briefcase'></span> Shopping cart</a>
-                    </li>
-                    <li><a href="checkout.html"><span class='glyphicon glyphicon-ok'></span> Checkout</a></li>
+                    <?php
+                    $locations = get_nav_menu_locations();
+                    $menu_items = wp_get_nav_menu_items($locations['menu_fix']);
+
+
+                    foreach ((array)$menu_items as $key => $menu_item) { ?>
+                        <li class="<?php if ($post->ID == $menu_item->object_id) {
+                            echo ' '.'active';
+                        }?>">
+                            <a href="<?php echo $menu_item->url; ?>"><?php echo $menu_item->title; ?></a>
+                        </li>
+
+                    <?php }; ?>
+
                 </ul>
                 <ul class="nav navbar-nav pull-right">
                     <li class="dropdown nav-bar-dropdown">
