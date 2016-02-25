@@ -33,7 +33,15 @@ get_header( 'shop' ); ?>
 
 		<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 
-			<h1 class="page-title"><?php woocommerce_page_title(); ?></h1>
+			<section class="page-title">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-8">
+							<h1><?php woocommerce_page_title(); ?></h1>
+						</div>
+					</div>
+				</div>
+			</section>
 
 		<?php endif; ?>
 
@@ -59,19 +67,26 @@ get_header( 'shop' ); ?>
 				do_action( 'woocommerce_before_shop_loop' );
 			?>
 
-			<?php woocommerce_product_loop_start(); ?>
 
 
 
-				<?php woocommerce_product_subcategories(); ?>
+
+				<?php woocommerce_product_subcategories(array(
+				'before'        => '<div class="presentation-boxes">',
+				'after'         => '</div>',
+				'force_display' => false
+			)); ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
+
 					<?php wc_get_template_part( 'content', 'product' ); ?>
+
+
 
 				<?php endwhile; // end of the loop. ?>
 
-			<?php woocommerce_product_loop_end(); ?>
+
 
 			<?php
 				/**
