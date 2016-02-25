@@ -77,6 +77,11 @@ get_header( 'shop' ); ?>
 				'force_display' => false
 			)); ?>
 
+<div class="new-arrivals-slider">
+	<ul class="slides">
+		<li>
+			<div class="row">
+
 				<?php while ( have_posts() ) : the_post(); ?>
 
 
@@ -84,7 +89,11 @@ get_header( 'shop' ); ?>
 
 
 
-				<?php endwhile; // end of the loop. ?>
+				<?php endwhile; // end of the loop ?>
+	                                        </div>
+                                        </li>
+                                    </ul>
+                                </div>
 
 
 

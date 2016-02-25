@@ -17,6 +17,16 @@ function woocommerce_support() {
 define( 'TEMPLATEINC', TEMPLATEPATH . '/inc' );
 define( 'TEMPLATEURI', get_template_directory_uri() );
 
+if ( function_exists('register_sidebar') )
+    register_sidebar(array(
+        'name' => 'New Sidebar',
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '',
+        'after_title' => '',
+    ));
+
+
 // Load library files.
 require_once( TEMPLATEINC . '/shortcodes.php' );
 require_once( TEMPLATEINC . '/cpt.php' );

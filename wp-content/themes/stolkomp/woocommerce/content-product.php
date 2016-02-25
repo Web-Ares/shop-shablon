@@ -47,47 +47,51 @@ if ( 0 === ( $woocommerce_loop['loop'] - 1 ) % $woocommerce_loop['columns'] || 1
 if ( 0 === $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
 	$classes[] = 'last';
 }
+
 ?>
+
+
+
+
 <article class="category-article category-grid col-sm-3">
+	<figure>
+		<?php
+		$percent = $product->get_attribute('pa_percent');
+		if (!empty($percent)) {
+			echo '<div class="corner-sign red">'.$percent.'</div>';
+		}
+		$percent = $product->get_attribute('pa_percent');
+		if (!empty($percent)) {
+			echo '<div class="corner-sign red">'.$percent.'</div>';
+		}
+		echo $product->get_image('full'); ?>
+		<div class="figure-overlay">
+			<div class="rating-line">
+				<div class="stars-white" data-number="5" data-score="2"></div>
+			</div>
+			<div class="excerpt">
+				<p>
+					<?php echo apply_filters('woocommerce_short_description', $post->post_excerpt) ?>
+				</p>
+			</div>
+			<a href="<?php echo $product->add_to_cart_url(); ?>" class="btn btn-default custom-button">Add to Bag</a>
+		</div>
+	</figure>
+	<div class="figcaption">
 
-	<?php
-	/**
-	 * woocommerce_before_shop_loop_item hook.
-	 *
-	 * @hooked woocommerce_template_loop_product_link_open - 10
-	 */
-	do_action( 'woocommerce_before_shop_loop_item' );
+	</div>
+	<div class="text">
+		<h2><a href="<?php echo $product->get_permalink(); ?>"><?php echo $product->get_title(); ?></a></h2>
+		<div class="price">
+            <span
+				class="old-price"><?php echo sprintf(get_woocommerce_currency_symbol()) . ' ' . $product->get_regular_price(); ?></span>
+			<?php
+			$sale_price = $product->get_sale_price();
+			if (!empty($sale_price)) {
+				echo '<span class="new-price">' . sprintf(get_woocommerce_currency_symbol()) . ' ' . $sale_price . '</span>';
+			} ?>
 
-	/**
-	 * woocommerce_before_shop_loop_item_title hook.
-	 *
-	 * @hooked woocommerce_show_product_loop_sale_flash - 10
-	 * @hooked woocommerce_template_loop_product_thumbnail - 10
-	 */
-	do_action( 'woocommerce_before_shop_loop_item_title' );
 
-	/**
-	 * woocommerce_shop_loop_item_title hook.
-	 *
-	 * @hooked woocommerce_template_loop_product_title - 10
-	 */
-	do_action( 'woocommerce_shop_loop_item_title' );
-
-	/**
-	 * woocommerce_after_shop_loop_item_title hook.
-	 *
-	 * @hooked woocommerce_template_loop_rating - 5
-	 * @hooked woocommerce_template_loop_price - 10
-	 */
-	do_action( 'woocommerce_after_shop_loop_item_title' );
-
-	/**
-	 * woocommerce_after_shop_loop_item hook.
-	 *
-	 * @hooked woocommerce_template_loop_product_link_close - 5
-	 * @hooked woocommerce_template_loop_add_to_cart - 10
-	 */
-	do_action( 'woocommerce_after_shop_loop_item' );
-	?>
-
+		</div>
+	</div>
 </article>
