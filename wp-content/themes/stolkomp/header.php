@@ -91,8 +91,7 @@
                     </li>
                     <li>
                         <?php
-                        $cart = new WC_Cart();
-                        $cart->init();
+                        $cart = WC()->cart;
 
                         $cart_url = $cart->get_cart_url();
                         $count_products = count($cart->get_cart_item_quantities());
