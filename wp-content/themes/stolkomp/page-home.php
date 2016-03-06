@@ -58,4 +58,112 @@
     </div>
 </section>
 
+
+<section id='main'>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="homepage-products">
+                    <ul id="myTab" class="nav nav-tabs">
+                        <li class="active"><a href="#new-arrivals" data-toggle="tab">New Arrivals</a></li>
+                        <li><a href="#featured" data-toggle="tab">Featured</a></li>
+                    </ul>
+                    <div id="myTabContent" class="tab-content">
+                        <div class="tab-pane fade in active" id="new-arrivals">
+                            <div class="slider-controls new-arrivals-controls">
+                                <button class="next"><i class="glyphicon glyphicon-chevron-left"></i></button>
+                                <button class="prev"><i class="glyphicon glyphicon-chevron-right"></i></button>
+                            </div>
+                            <div class="new-arrivals-slider">
+                                <ul class="slides">
+                                    <li>
+                                        <div class="row">
+
+                                            <?php echo do_shortcode('[recent_products per_page="4" columns="4"]');?>
+
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <?php echo do_shortcode('[recent_products per_page="4" columns="4"]');?>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div class="tab-pane fade" id="featured">
+
+                                <ul class="slides">
+                                    <li>
+                                        <div class="row">
+                                            <?php echo do_shortcode('[featured_products per_page="12" columns="4"]'); ?>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="separator middle"></div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="section-title">
+                            <h1>BestSellers</h1>
+                        </div>
+                    </div>
+
+
+                    <?php
+                    $args = array(
+                        'post_type' => 'product',
+                        'posts_per_page' => 3,
+                        'meta_key' => 'total_sales',
+                        'orderby' => 'meta_value_num',
+                    );
+                    $loop = new WP_Query( $args );
+                    if ( $loop->have_posts() ) {
+                        while ( $loop->have_posts() ) : $loop->the_post();
+                            woocommerce_get_template_part( 'content', 'product' );
+                        endwhile;
+                    } else {
+                        echo __( 'No products found' );
+                    }
+                    wp_reset_postdata();
+                    ?>
+
+                    <div style="clear: both"></div>
+                </div>
+
+            </div>
+            <aside class="col-sm-4">
+                <div class="newsletter-widget">
+                    <h2>Newsletter</h2>
+                    <div class="small-separator"></div>
+                    <p> Sing up to get exclusive offers from your favoritebrands.</p>
+                    <input type="email" class="form-control" placeholder="Enter your email address"/>
+                    <input type="submit" value="Sign up" class="btn btn-default custom-button btn-lg" />
+                </div>
+
+            </aside>
+        </div>
+
+    </div>
+</section>
+
+
 <?php get_footer(); ?>

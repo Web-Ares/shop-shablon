@@ -65,6 +65,7 @@ get_header( 'shop' ); ?>
 				 * @hooked woocommerce_catalog_ordering - 30
 				 */
 				do_action( 'woocommerce_before_shop_loop' );
+
 			?>
 
 
@@ -77,10 +78,7 @@ get_header( 'shop' ); ?>
 				'force_display' => false
 			)); ?>
 
-<div class="new-arrivals-slider">
-	<ul class="slides">
-		<li>
-			<div class="row">
+
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
@@ -90,10 +88,7 @@ get_header( 'shop' ); ?>
 
 
 				<?php endwhile; // end of the loop ?>
-	                                        </div>
-                                        </li>
-                                    </ul>
-                                </div>
+
 
 
 

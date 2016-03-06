@@ -51,8 +51,6 @@ if ( 0 === $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
 ?>
 
 
-
-
 <article class="category-article category-grid col-sm-3">
 	<figure>
 		<?php
