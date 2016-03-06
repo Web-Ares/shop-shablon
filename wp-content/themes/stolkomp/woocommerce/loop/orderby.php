@@ -25,6 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php foreach ( $catalog_orderby_options as $id => $name ) : ?>
 			<option value="<?php echo esc_attr( $id ); ?>" <?php selected( $orderby, $id ); ?>><?php echo esc_html( $name ); ?></option>
 		<?php endforeach; ?>
+
 	</select>
 	<?php
 		// Keep query string vars intact
@@ -41,4 +42,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 			}
 		}
 	?>
+<!--	<button type="submit">SUBMIT!</button>-->
 </form>

@@ -165,5 +165,8 @@
     </div>
 </section>
 
+<?php the_widget('widget_price_filter'); echo '111' ?>
+
+<?php dynamic_sidebar( 'New Sidebar' ); ?>
 
 <?php get_footer(); ?>

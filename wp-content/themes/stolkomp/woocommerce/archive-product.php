@@ -91,7 +91,6 @@ get_header( 'shop' ); ?>
 
 
 
-
 			<?php
 				/**
 				 * woocommerce_after_shop_loop hook.
