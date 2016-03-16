@@ -19,12 +19,16 @@ define( 'TEMPLATEURI', get_template_directory_uri() );
 
 if ( function_exists('register_sidebar') )
     register_sidebar(array(
-        'name' => 'New Sidebar',
+        'name' => 'sidebar-1',
         'before_widget' => '',
         'after_widget' => '',
         'before_title' => '',
         'after_title' => '',
     ));
+
+
+//apply_filters('woocommerce_before_shop_loop','price_filter','40');
+
 
 
 // Load library files.

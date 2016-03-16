@@ -111,14 +111,3 @@ function wb_products ($atts,$before,$after){
 
     return  ob_get_clean();
 }
-
-//add_filter( 'woocommerce_get_price_html', 'custom_price_html', 100, 2 );
-//function custom_price_html( $price, $product ){
-//    $price = '';
-//    $sale_price = get_post_meta( get_the_ID(), '_sale_price', true);
-//    if(!empty($sale_price)) {
-//        $price .= '<span class="old-price">' . sprintf(get_woocommerce_currency_symbol()) . ' ' . get_post_meta(get_the_ID(), '_sale_price', true) . '</span> ';
-//    }
-//    $price .= '<span class="new-price">'.sprintf(get_woocommerce_currency_symbol() ) .' '. get_post_meta( get_the_ID(), '_regular_price', true).'</span>';
-//    return apply_filters( 'woocommerce_get_price', $price );
-//}

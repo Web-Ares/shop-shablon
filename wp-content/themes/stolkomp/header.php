@@ -20,8 +20,10 @@
         <link rel="stylesheet" href="<?php echo TEMPLATEURI ?>/css/chosen.css">
         <link rel="stylesheet" href="<?php echo TEMPLATEURI ?>/css/slider.css">
         <link rel="stylesheet" href="<?php echo TEMPLATEURI ?>/css/style.css">
+        <link rel="stylesheet" href="<?php echo TEMPLATEURI ?>/style.css">
 
         <script src="<?php echo TEMPLATEURI ?>/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
     </head>
 
 <body <?php body_class(); ?>>

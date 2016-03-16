@@ -126,8 +126,8 @@
     <script src="<?php echo TEMPLATEURI ?>/js/vendor/tinynav.min.js"></script>
     <script src="<?php echo TEMPLATEURI ?>/js/vendor/jquery.raty.min.js"></script>
     <script src="<?php echo TEMPLATEURI ?>/js/vendor/chosen.jquery.min.js"></script>
-    <script src="<?php echo TEMPLATEURI ?>/js/vendor/bootstrap-slider.js"></script>
     <script src="<?php echo TEMPLATEURI ?>/js/vendor/bootstrap.min.js"></script>
+    <script src="<?php echo TEMPLATEURI ?>/js/vendor/bootstrap-slider.js"></script>
     <script src="<?php echo TEMPLATEURI ?>/js/main.js"></script>
 </div>
 <?php wp_footer(); ?>

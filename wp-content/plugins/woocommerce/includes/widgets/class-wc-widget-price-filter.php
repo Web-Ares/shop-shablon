@@ -169,6 +169,8 @@ class WC_Widget_Price_Filter extends WC_Widget {
 			}
 		}
 
+
+
 		echo '<form method="get" action="' . esc_url( $form_action ) . '">
 			<div class="price_slider_wrapper">
 				<div class="price_slider" style="display:none;"></div>
@@ -184,6 +186,7 @@ class WC_Widget_Price_Filter extends WC_Widget {
 				</div>
 			</div>
 		</form>';
+
 
 		$this->widget_end( $args );
 	}

@@ -5,3 +5,78 @@ Author URI:
 Description:
 Version: 1.0
 */
+/* =Price Filter Widget
+	-------------------------------------------------------------- */
+
+
+.price_slider.ui-slider.ui-slider-horizontal.ui-widget.ui-widget-content.ui-corner-all {
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	width: 100%;
+	border-radius: 1em;
+	border: 0;
+	height: 6px;
+	border-radius: 2px;
+	background-clip: padding-box;
+	margin-top: -3px;
+	background-color: #f7f7f7;
+}
+span.ui-slider-handle.ui-state-default.ui-corner-all {
+	position: absolute;
+	z-index: 2;
+	width: 1em;
+	height: 1em;
+	background-color: #e48d48;
+	border-radius: 1em;
+	cursor: ew-resize;
+	outline: none;
+	top: -3px;
+	margin-left: -0.5em;
+	width: 9px;
+	height: 14px;
+	border: solid 2px #a3a3a3;
+	-webkit-border-radius: 3px;
+	-webkit-background-clip: padding-box;
+	-moz-border-radius: 3px;
+	-moz-background-clip: padding;
+	border-radius: 3px;
+	background-clip: padding-box;
+	background: white;
+	-webkit-opacity: 1;
+	-moz-opacity: 1;
+	opacity: 1;
+}
+.ui-slider-range.ui-widget-header.ui-corner-all {
+	position: absolute;
+	height: 100%;
+	top: 0;
+	background: #a3a3a3;
+	bottom: 0;
+}
+.price_slider_wrapper {
+	width: 123px;
+	margin: 0 auto;
+	position: relative;
+}
+.price_slider_amount {
+	font-size: 13px;
+	position: absolute;
+	line-height: 30px;
+	font-family: "Verdana", Arial, sans-serif;
+	color: #999999;
+	font-weight: 300;
+	vertical-align: middle;
+	display: inline-block;
+	margin-bottom: 0;
+	margin-right: 5px;
+	right: -153px;
+	top: -6px;
+}
+.price_label {
+	position: absolute;
+	width: 148px;
+	top: -30px;
+	left: 50%;
+	margin-left: -390px;
+}

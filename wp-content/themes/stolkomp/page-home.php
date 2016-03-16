@@ -165,8 +165,19 @@
     </div>
 </section>
 
-<?php the_widget('widget_price_filter'); echo '111' ?>
+<?php $args = array(
+    'orderby' => 'term_order'
+);
 
-<?php dynamic_sidebar( 'New Sidebar' ); ?>
+$product_categories = get_terms( 'product_cat',$args );
 
+$count = count($product_categories);
+if ( $count > 0 ){
+echo "<ul>";
+    foreach ( $product_categories as $product_category ) {
+    echo '<li><a href="' . get_term_link( $product_category ) . '">' . $product_category->name . '</li>';
+
+    }
+    echo "</ul>";
+}?>
 <?php get_footer(); ?>

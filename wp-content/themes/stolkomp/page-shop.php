@@ -4,13 +4,8 @@
  */
 get_header(); ?>
 
-<?php if ( ! defined( 'ABSPATH' ) ) {
-exit;
-}
 
-global $woocommerce_loop;
- woocommerce_content(); ?>
+<?php //dynamic_sidebar( 'sidebar-1' ); ?>
 
-
-<?php get_footer();
+<?php  get_footer();
 ?>

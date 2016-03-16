@@ -19,7 +19,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
+
 ?>
+
+<div class="col-sm-8">
+
+	<div class="filter-bar">
+	<div class="half">
+
+
 <form class="woocommerce-ordering" method="get">
 	<select name="orderby" class="orderby">
 		<?php foreach ( $catalog_orderby_options as $id => $name ) : ?>
@@ -42,5 +50,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 			}
 		}
 	?>
-<!--	<button type="submit">SUBMIT!</button>-->
+	<button type="submit">SUBMIT!</button>
 </form>
+
+</div>
+
+		<div class="half">
+			<?php dynamic_sidebar( 'sidebar-1' ); ?>
+		</div>
+
+	</div>
